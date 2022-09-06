@@ -63,8 +63,12 @@ body{
     background-color:var(--accent-color);
     z-index: -2;
     @media (max-width:1200px){
-        height: 180px;
-        width: 375px;
+        height: 175px;
+        width: 350px;
+    }
+    @media (max-width:650px){
+        height: 70px;
+        width: 140px;
     }
 }
 .triangle-bottom{
@@ -101,8 +105,12 @@ body{
 }
 a{
     text-decoration: none;
+    &:link{
+        color:inherit;
+    }
     &:visited{
         color:inherit;
+        
     }
 }
 .title {
@@ -259,21 +267,23 @@ img {
 .contact__info{
     &-menu{
         margin-bottom: 20px;
+
+        span{
+            padding: 0 20px;
+        }
     }
+
     span{
         padding: 0 10px;
     }
 }
- 
+
 .logo-location {
-    @media (max-width:1000px){
-        margin-right: 15px;
-    }
+    
 }
 .logo-telephone {
     margin-left: 20px;
     @media (max-width:1000px){
-        margin-right: 15px;
         margin-left: 0;
     }
 }
@@ -284,8 +294,6 @@ img {
     @media (max-width:1000px){
         display: block;
     }
-
-    
 }
 .contacts__info-menu{
     position: absolute;
@@ -442,12 +450,14 @@ img {
         display: flex;
         justify-content: start;
         align-items:center;
-        overflow: scroll;
 
         @media (max-width:1000px){
             flex-direction: column;
             align-items:center;
             height: calc(100% - 200px);
+        }
+        @media (max-width:550px){
+            overflow: scroll;
         }
     }
     
@@ -457,8 +467,11 @@ img {
         text-align: center;
         padding: 5px 15px;
         position: relative;
+        @media (max-width:550px){
+            margin-bottom: 20px;
+        }
         @media (max-width:1000px){
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         &::after { 
             content: "";
@@ -553,6 +566,13 @@ img {
     @media(max-width:850px){
         display: block;
     }
+    /*??*/
+    @media(max-width:650px){
+        height: 400px;
+    }
+    @media(max-width:650px){
+        height: 350px;
+    }
     
 
     .triangle-bottom{
@@ -592,21 +612,22 @@ img {
             display: none;
         }
     }
-
+    
     &__container {
         display: flex;
         position: relative;
         align-items:center;
         justify-content: space-around;
+        @media(max-width:650px){
+            display: block;
+        }
 
-        &-mobile{
+        /*&-mobile{
             display: none;
             @media(max-width:850px){
                 display: block;
-                
             }
-
-        }
+        }*/
     }
     
     &__info{
@@ -648,15 +669,33 @@ img {
 
     &__image-girl{
         position: absolute;
-        left: 0;
+        left: 10%;
         bottom: 0;
         z-index: 2;
+        @media(max-width:850px){
+            left: 25%;
+        }
+        @media(max-width:650px){
+            height: 400px;
+        }
+        @media(max-width:650px){
+            height: 350px;
+        }
     }  
     &__image-field{
         position: relative;
         bottom: -2px;
         clip-path: polygon(70% 0, 74% 0, 100% 100%, 0 100%);
+        @media(max-width:650px){
+            height: 350px;
+            bottom: 0;
+        }
+        
         img{
+            @media(max-width:650px){
+                height: 400px;
+                bottom: 0;
+            }
             width: 650px;
             height: 572px;
             z-index: -1;
