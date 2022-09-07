@@ -18,6 +18,10 @@
   --fw-bold: 900;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
@@ -1140,6 +1144,11 @@ img {
   position: absolute;
   left: 45%;
   bottom: 10%;
+}
+@media (max-width: 1150px) {
+  .farm__slider .slick-dots {
+    left: 40%;
+  }
 }
 .farm__slider .slick-dots li {
   list-style: none;

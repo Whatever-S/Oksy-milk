@@ -40,10 +40,10 @@ function openModalWindow(){
     clearInterval(modalTimerId);
 }
 
-modalBtn.addEventListener('click', openModalWindow,{once : true});
+modalBtn.addEventListener('click', openModalWindow);
 modalWindowCloser.addEventListener('click',closeModalWindow);
 
-const modalTimerId = setTimeout(openModalWindow, 15000);
+const modalTimerId = setTimeout(openModalWindow, 15000,);
 modalWindow.addEventListener('click',(e)=>{
     if(e.target === modalWindow)
     closeModalWindow();
@@ -53,9 +53,3 @@ document.addEventListener('keydown',(e) =>{
     if(e.code === 'Escape' && modalWindow.classList.contains('show'))
     closeModalWindow();
 });
-
-if(headerMenu.classList.contains('active')){
-    
-}
-
-                
